@@ -28,6 +28,13 @@ eval my_orange='$FG[214]'
 
 # right prompt
 RPROMPT='$(virtualenv_prompt_info)$my_gray%n@%m%{$reset_color%}%'
+if type "virtualenv_prompt" > /dev/null
+then
+	RPROMPT='$(virtualenv_prompt_info)$my_gray%n@%m%{$reset_color%}%'
+else
+	RPROMPT='$my_gray%n@%m%{$reset_color%}%'
+fi
+>>>>>>> Fix for virtualenv support - fixes #2328, fixes #2297, resolves #2319
 
 # git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075](branch:"
