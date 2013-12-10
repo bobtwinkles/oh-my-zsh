@@ -27,8 +27,8 @@ eval my_gray='$FG[237]'
 eval my_orange='$FG[214]'
 
 # right prompt
-RPROMPT='$(virtualenv_prompt_info)$my_gray%n@%m%{$reset_color%}%'
-if type "virtualenv_prompt" > /dev/null
+if type "virtualenv_prompt_info" > /dev/null
+>>>>>>> typo fix
 then
 	RPROMPT='$(virtualenv_prompt_info)$my_gray%n@%m%{$reset_color%}%'
 else
