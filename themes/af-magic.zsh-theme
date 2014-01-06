@@ -28,13 +28,15 @@ eval my_orange='$FG[214]'
 
 # right prompt
 if type "virtualenv_prompt_info" > /dev/null
->>>>>>> typo fix
 then
 	RPROMPT='$(virtualenv_prompt_info)$my_gray%n@%m%{$reset_color%}%'
 else
 	RPROMPT='$my_gray%n@%m%{$reset_color%}%'
 fi
 >>>>>>> Fix for virtualenv support - fixes #2328, fixes #2297, resolves #2319
+=======
+RPROMPT='$(virtualenv_prompt_info)$my_gray%n@%m%{$reset_color%}%'
+>>>>>>> Fixes RPROMPT in af-magic.zsh-theme
 
 # git settings
 ZSH_THEME_GIT_PROMPT_PREFIX="$FG[075](branch:"
